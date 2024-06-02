@@ -1,4 +1,4 @@
-import 'index.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TextSizeResource {
   static double fontSize14 = 14.sp;

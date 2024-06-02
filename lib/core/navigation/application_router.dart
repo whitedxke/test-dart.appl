@@ -1,4 +1,7 @@
-import 'index.dart';
+import 'package:auto_route/auto_route.dart';
+
+import '../../ui/pages/greeting/greeting_page.dart';
+import '../../ui/pages/onboarding/onboarding_page.dart';
 
 part 'application_router.gr.dart';
 

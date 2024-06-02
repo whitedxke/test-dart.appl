@@ -1,4 +1,6 @@
-import 'index.dart';
+import 'package:flutter/material.dart';
+
+import '../../core/resources/color_resource.dart';
 
 class ParentWidget extends StatelessWidget {
   final Widget _widget;

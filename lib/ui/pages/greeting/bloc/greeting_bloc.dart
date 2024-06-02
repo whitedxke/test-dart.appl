@@ -1,4 +1,5 @@
-import 'index.dart';
+import 'package:bloc/bloc.dart';
+import 'package:equatable/equatable.dart';
 
 part 'greeting_event.dart';
 part 'greeting_state.dart';

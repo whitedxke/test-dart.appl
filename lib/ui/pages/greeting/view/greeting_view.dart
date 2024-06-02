@@ -1,4 +1,15 @@
-import 'index.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:lottie/lottie.dart';
+
+import '../../../../core/resources/image_resource.dart';
+import '../../../../core/resources/string/string_resource.dart';
+import '../../../../core/resources/text/text_height_resource.dart';
+import '../../../../core/resources/text/text_style_resource.dart';
+import '../../../../core/utils/constraints.dart';
+import '../../../widgets/parent_widget.dart';
+import '../bloc/greeting_bloc.dart';
 
 part 'components/greeting_view.description_text.part.dart';
 
