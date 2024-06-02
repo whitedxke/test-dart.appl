@@ -14,7 +14,7 @@ class GreetingBloc extends Bloc<GreetingEvent, GreetingState> {
   Future<void> _calculateStartDelayNavigationEvent({
     required Emitter<GreetingState> emit,
   }) async {
-    await Future.delayed(const Duration(seconds: 6));
+    await Future.delayed(const Duration(seconds: 4));
     emit(NavigateToOnboardingState());
   }
 }
