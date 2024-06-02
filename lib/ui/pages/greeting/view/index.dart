@@ -1,3 +1,4 @@
+// System packages.
 export 'package:flutter/material.dart';
 
 // Package for size adaptation.
@@ -5,20 +6,19 @@ export 'package:flutter_screenutil/flutter_screenutil.dart';
 // Package for animating images with json format.
 export 'package:lottie/lottie.dart';
 
-// Resources.
+// Provides basic functionality for state management.
+export 'package:flutter_bloc/flutter_bloc.dart';
+// Logic of state management for greeting page.
+export '../bloc/greeting_bloc.dart';
+
+// Links to utils.
+export '../../../../core/utils/constraints.dart';
+
+// Links to widgets.
+export '../../../widgets/parent_widget.dart';
+
+// links to resources.
 export '../../../../core/resources/image_resource.dart';
 export '../../../../core/resources/string/string_resource.dart';
 export '../../../../core/resources/text/text_height_resource.dart';
 export '../../../../core/resources/text/text_style_resource.dart';
-
-// Utils.
-export '../../../../core/utils/constraints.dart';
-
-// Widgets.
-export '../../../widgets/parent_widget.dart';
-
-// Provides basic functionality for state management.
-export 'package:flutter_bloc/flutter_bloc.dart';
-
-// Logic of state management for greeting page.
-export '../bloc/greeting_bloc.dart';
