@@ -14,7 +14,8 @@ class GreetingView extends StatefulWidget {
   State<GreetingView> createState() => _GreetingViewState();
 }
 
-class _GreetingViewState extends State<GreetingView> with TickerProviderStateMixin<GreetingView> {
+class _GreetingViewState extends State<GreetingView>
+    with TickerProviderStateMixin<GreetingView> {
   late final AnimationController _animationController;
 
   @override
