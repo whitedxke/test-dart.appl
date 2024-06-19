@@ -25,6 +25,19 @@ class TextStyleResource {
     );
   }
 
+  static TextStyle white18({
+    required FontWeight weight,
+    required TextHeightResource height,
+  }) {
+    return _base.merge(
+      TextStyle(
+        fontSize: TextSizeResource.fontSize18,
+        fontWeight: weight,
+        height: height.value,
+      ),
+    );
+  }
+
   static TextStyle black14({
     required FontWeight weight,
     required TextHeightResource height,

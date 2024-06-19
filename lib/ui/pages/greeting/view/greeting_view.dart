@@ -37,7 +37,9 @@ class _GreetingViewState extends State<GreetingView>
       body: Align(
         alignment: Alignment.center,
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 24.w),
+          padding: EdgeInsets.symmetric(
+            horizontal: 24.w,
+          ),
           child: Lottie.asset(
             ImageResource.animationWhale,
             height: 250.w,
