@@ -20,13 +20,16 @@ class _GreetingViewState extends State<GreetingView>
 
   @override
   void initState() {
-    _animationController = AnimationController(vsync: this);
+    _animationController = AnimationController(
+      vsync: this,
+    );
     _animationController.addListener(() {
       if (_animationController.value > 1) {
         _animationController.value = 1;
       }
     });
     context.read<GreetingBloc>().add(StartDelayNavigationEvent());
+
     super.initState();
   }
 

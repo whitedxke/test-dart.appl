@@ -13,6 +13,8 @@ class ApplicationRouter extends _$ApplicationRouter {
       page: GreetingRoute.page,
       initial: true,
     ),
-    AutoRoute(page: OnboardingRoute.page),
+    AutoRoute(
+      page: OnboardingRoute.page,
+    ),
   ];
 }

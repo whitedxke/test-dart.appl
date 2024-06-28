@@ -6,15 +6,22 @@ class ApplicationBlocObserver extends BlocObserver {
   void noSuchMethod(Invocation invocation) {
     super.noSuchMethod(invocation);
     if (kDebugMode) {
-      print('ApplicationBlocObserver. Such method: $invocation.');
+      print(
+        'ApplicationBlocObserver. Such method: $invocation.',
+      );
     }
   }
 
   @override
-  void onChange(BlocBase bloc, Change change) {
+  void onChange(
+    BlocBase bloc,
+    Change change,
+  ) {
     super.onChange(bloc, change);
     if (kDebugMode) {
-      print('ApplicationBlocObserver. Change: $change.');
+      print(
+        'ApplicationBlocObserver. Change: $change.',
+      );
     }
   }
 
@@ -22,7 +29,9 @@ class ApplicationBlocObserver extends BlocObserver {
   void onClose(BlocBase bloc) {
     super.onClose(bloc);
     if (kDebugMode) {
-      print('ApplicationBlocObserver. Close: $bloc.');
+      print(
+        'ApplicationBlocObserver. Close: $bloc.',
+      );
     }
   }
 
@@ -30,31 +39,49 @@ class ApplicationBlocObserver extends BlocObserver {
   void onCreate(BlocBase bloc) {
     super.onCreate(bloc);
     if (kDebugMode) {
-      print('ApplicationBlocObserver. Create: $bloc.');
+      print(
+        'ApplicationBlocObserver. Create: $bloc.',
+      );
     }
   }
 
   @override
-  void onEvent(Bloc bloc, Object? event) {
+  void onEvent(
+    Bloc bloc,
+    Object? event,
+  ) {
     super.onEvent(bloc, event);
     if (kDebugMode) {
-      print('ApplicationBlocObserver. Event: $event.');
+      print(
+        'ApplicationBlocObserver. Event: $event.',
+      );
     }
   }
 
   @override
-  void onTransition(Bloc bloc, Transition transition) {
+  void onTransition(
+    Bloc bloc,
+    Transition transition,
+  ) {
     super.onTransition(bloc, transition);
     if (kDebugMode) {
-      print('ApplicationBlocObserver. Transition: $transition.');
+      print(
+        'ApplicationBlocObserver. Transition: $transition.',
+      );
     }
   }
 
   @override
-  void onError(BlocBase bloc, Object error, StackTrace stackTrace) {
+  void onError(
+    BlocBase bloc,
+    Object error,
+    StackTrace stackTrace,
+  ) {
     super.onError(bloc, error, stackTrace);
     if (kDebugMode) {
-      print('ApplicationBlocObserver. Error: $error.');
+      print(
+        'ApplicationBlocObserver. Error: $error.',
+      );
     }
   }
 }
