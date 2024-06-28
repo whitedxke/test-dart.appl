@@ -1,6 +1,7 @@
-import 'package:auto_route/annotations.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
+import '../../../core/navigation/application_router.dart';
 import 'view/onboarding_view.dart';
 
 @RoutePage()
@@ -17,7 +18,9 @@ class _OnboardingPageState extends State<OnboardingPage> {
     OnboardingDelegate delegate = OnboardingDelegate(
       context: context,
     );
-    return const OnboardingView();
+    return OnboardingView(
+      protocol: delegate,
+    );
   }
 }
 
@@ -27,4 +30,11 @@ class OnboardingDelegate implements OnboardingProtocol {
   OnboardingDelegate({
     required this.context,
   });
+
+  @override
+  void onNavigateToHomePage() {
+    context.router.replaceAll([
+      const HomeRoute(),
+    ]);
+  }
 }

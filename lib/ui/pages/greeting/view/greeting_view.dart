@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lottie/lottie.dart';
 
-import '../../../../core/resources/color_resource.dart';
 import '../../../../core/resources/image_resource.dart';
+import '../../../widgets/base_page_widget.dart';
 import '../bloc/greeting_bloc.dart';
 
 class GreetingView extends StatefulWidget {
@@ -35,9 +35,8 @@ class _GreetingViewState extends State<GreetingView>
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: ColorResource.black,
-      body: Align(
+    return BasePageWidget(
+      widget: Align(
         alignment: Alignment.center,
         child: Padding(
           padding: EdgeInsets.symmetric(
@@ -57,6 +56,7 @@ class _GreetingViewState extends State<GreetingView>
           ),
         ),
       ),
+      inverse: false,
     );
   }
 }

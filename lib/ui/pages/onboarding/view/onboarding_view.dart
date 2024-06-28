@@ -5,17 +5,22 @@ import '../../../../core/resources/color_resource.dart';
 import '../../../../core/resources/string/string_resource.dart';
 import '../../../../core/resources/text/text_height_resource.dart';
 import '../../../../core/resources/text/text_style_resource.dart';
+import '../../../widgets/base_page_widget.dart';
 
 part 'onboarding_view.description_text.part.dart';
 
 class OnboardingView extends StatelessWidget {
-  const OnboardingView({super.key});
+  final OnboardingProtocol _protocol;
+
+  const OnboardingView({
+    super.key,
+    required OnboardingProtocol protocol,
+  }) : _protocol = protocol;
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: ColorResource.black,
-      body: SafeArea(
+    return BasePageWidget(
+      widget: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(
             horizontal: 24.w,
@@ -40,8 +45,11 @@ class OnboardingView extends StatelessWidget {
           ),
         ),
       ),
+      inverse: false,
     );
   }
 }
 
-abstract class OnboardingProtocol {}
+abstract class OnboardingProtocol {
+  void onNavigateToHomePage();
+}

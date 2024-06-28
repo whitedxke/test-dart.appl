@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 
 import '../../ui/pages/greeting/greeting_page.dart';
+import '../../ui/pages/home/home_page.dart';
 import '../../ui/pages/onboarding/onboarding_page.dart';
 
 part 'application_router.gr.dart';
@@ -12,6 +13,9 @@ class ApplicationRouter extends _$ApplicationRouter {
     AutoRoute(
       page: GreetingRoute.page,
       initial: true,
+    ),
+    AutoRoute(
+      page: HomeRoute.page,
     ),
     AutoRoute(
       page: OnboardingRoute.page,
