@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lottie/lottie.dart';
 
-import '../../../../core/resources/color_resource.dart';
 import '../../../../core/resources/image_resource.dart';
+import '../../../widgets/base_page_widget.dart';
 import '../bloc/greeting_bloc.dart';
 
 class GreetingView extends StatefulWidget {
@@ -14,29 +14,34 @@ class GreetingView extends StatefulWidget {
   State<GreetingView> createState() => _GreetingViewState();
 }
 
-class _GreetingViewState extends State<GreetingView> with TickerProviderStateMixin<GreetingView> {
+class _GreetingViewState extends State<GreetingView>
+    with TickerProviderStateMixin<GreetingView> {
   late final AnimationController _animationController;
 
   @override
   void initState() {
-    _animationController = AnimationController(vsync: this);
+    _animationController = AnimationController(
+      vsync: this,
+    );
     _animationController.addListener(() {
       if (_animationController.value > 1) {
         _animationController.value = 1;
       }
     });
     context.read<GreetingBloc>().add(StartDelayNavigationEvent());
+
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: ColorResource.black,
-      body: Align(
+    return BasePageWidget(
+      widget: Align(
         alignment: Alignment.center,
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 24.w),
+          padding: EdgeInsets.symmetric(
+            horizontal: 24.w,
+          ),
           child: Lottie.asset(
             ImageResource.animationWhale,
             height: 250.w,
@@ -51,6 +56,7 @@ class _GreetingViewState extends State<GreetingView> with TickerProviderStateMix
           ),
         ),
       ),
+      inverse: false,
     );
   }
 }
